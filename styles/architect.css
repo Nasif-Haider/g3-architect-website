@@ -26,6 +26,7 @@ html {
 h1,
 h2,
 h3,
+h4,
 p {
     font-family: Work Sans;
 }
@@ -116,7 +117,43 @@ main {
     color: #FF900E;
     font-weight: 700;
 }
-
+/* Features section styles */
+.features{
+    display: flex;
+    margin-top: 130px;
+}
+.feature-content .card{
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+.feature-content .section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.ten-years-badge{
+    border-radius: 8px;
+    background: #FF900E;
+    color: #FFF;
+    width: 342px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+}
+.ten-years-badge h2{
+    font-size: 4rem; 
+    margin: 0; 
+}
+.ten-years-badge p{
+    font-size: 1.5rem;
+}
+.feature-img img{
+    height: 90%;
+    margin-left: 90px;
+}
 /* Facts section */
 .facts-card-container {
     display: flex;
@@ -150,16 +187,14 @@ main {
 }
 
 .sponsor-image-container {
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
     display: flex;
-    margin-top: 50px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
 }
-.sponsor-image-container{
-    width: 165px;
+.sponsor-image-container img{
+    filter: grayscale(100%);
 }
 
 /* Responsive media queries */
@@ -173,9 +208,15 @@ main {
 
     nav,
     .team-container,
+    .features,
     .facts-card-container,
     .sponsor-image-container {
         flex-direction: column;
+    }
+
+    .feature-img img{
+        width: 90%;
+        margin-left: 0;
     }
 
     .teams-img-container {
@@ -195,7 +236,11 @@ main {
     .facts-card-container {
         gap: 20px;
     }
-}
+    .ten-years-badge{
+        position: static;
+        max-width: 200px;
+    }
+}   
 
 /* Tablet or medium devices */
 @media screen and (min-width: 576px) and (max-width: 996px) {
@@ -204,6 +249,7 @@ main {
     }
 
     nav,
+    .features,
     .sponsor-image-container,
     .team-container {
         flex-direction: column;
